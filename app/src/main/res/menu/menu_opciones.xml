@@ -11,17 +11,22 @@
     <item
         android:id="@+id/mpContacto"
         android:title="@string/mp_contacto"
-        android:orderInCategory="100">
+        android:orderInCategory="101">
     </item>
     <item
         android:id="@+id/mpAcerca"
         android:title="@string/mp_acerca"
-        android:orderInCategory="101">
+        android:orderInCategory="102">
     </item>
     <item
         android:id="@+id/mpConfigurar"
         android:title="@string/mp_Configurar"
-        android:orderInCategory="101">
+        android:orderInCategory="103">
+    </item>
+    <item
+        android:id="@+id/mpNotificacion"
+        android:title="@string/mp_Notificacion"
+        android:orderInCategory="104">
     </item>
 
 </menu>

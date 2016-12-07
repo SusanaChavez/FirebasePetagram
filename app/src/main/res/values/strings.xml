@@ -16,4 +16,5 @@
     <string name="tvConfigurar">Escribe tu usuario</string>
     <string name="btnGuardar">Guardar Cuenta</string>
     <string name="mp_Configurar">Configurar Cuenta</string>
+    <string name="mp_Notificacion">Recibir Notificaiones</string>
 </resources>

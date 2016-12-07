@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MiPetagram.iml" filepath="$PROJECT_DIR$/MiPetagram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FirebasePetagram.iml" filepath="$PROJECT_DIR$/FirebasePetagram.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
