@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "360829783045",
+    "firebase_url": "https://notificaciones-3d8fd.firebaseio.com",
+    "project_id": "notificaciones-3d8fd",
+    "storage_bucket": "notificaciones-3d8fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360829783045:android:a9a30eaefc33fdad",
+        "android_client_info": {
+          "package_name": "monti.com.firebasePetagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360829783045-sbchp4kmrc22ugbb6avbe2iu8af0na05.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "monti.com.firebasePetagram",
+            "certificate_hash": "2F8DCB81933322372EF1367DD1DE1AF9AC380F15"
+          }
+        },
+        {
+          "client_id": "360829783045-7nqgp94bsughgm5h8bs8vagvas5srbuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADybkwx2sg6sxd0ePlOJT-iaWP_65hpG8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360829783045-7nqgp94bsughgm5h8bs8vagvas5srbuo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
