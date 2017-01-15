@@ -1,6 +1,7 @@
 package monti.com.firebasePetagram.vistas;
 
 import monti.com.firebasePetagram.adapter.UsuarioPerfil;
+import monti.com.firebasePetagram.pojo.Mascota;
 import monti.com.firebasePetagram.pojo.Usuario;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public interface IPerfilFragment {
 
     public void generaGridLayout();
 
-    public UsuarioPerfil crearAdaptador(ArrayList<Usuario> usuarios);
+    public UsuarioPerfil crearAdaptador(ArrayList<Mascota> mascotas);
 
     public void inicializarAdaptadorRV(UsuarioPerfil adaptador);
 

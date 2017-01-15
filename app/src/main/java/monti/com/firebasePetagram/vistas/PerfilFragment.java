@@ -13,7 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import monti.com.firebasePetagram.R;
+import monti.com.firebasePetagram.adapter.MascotaAdaptador;
 import monti.com.firebasePetagram.adapter.UsuarioPerfil;
+import monti.com.firebasePetagram.pojo.Mascota;
 import monti.com.firebasePetagram.pojo.Usuario;
 import monti.com.firebasePetagram.presentador.PerfilFragmentPresentador;
 
@@ -76,8 +78,8 @@ public class PerfilFragment extends Fragment implements IPerfilFragment {
     }
 
     @Override
-    public UsuarioPerfil crearAdaptador(ArrayList<Usuario> usuarios) {
-        UsuarioPerfil adaptador = new UsuarioPerfil(usuarios, getActivity());
+    public UsuarioPerfil crearAdaptador(ArrayList<Mascota> mascotas) {
+        UsuarioPerfil adaptador = new UsuarioPerfil(mascotas, getActivity());
         return adaptador;
     }
 

@@ -22,7 +22,7 @@
             android:layout_marginTop="@dimen/margenTop"
             android:src="@drawable/plutito"
             android:layout_gravity="center"
-            android:background="@color/colorFondo"
+
             />
 
             <LinearLayout
@@ -36,14 +36,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_alignLeft="@+id/nroLike"
+                    android:layout_alignLeft="@+id/btnLike"
                     android:paddingLeft="34dp"
                     android:text="5"
                     android:textStyle="bold"
                     />
 
                 <ImageView
-                    android:id="@+id/nroLike"
+                    android:id="@+id/btnLike"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:paddingLeft="@dimen/activity_horizontal_margin"

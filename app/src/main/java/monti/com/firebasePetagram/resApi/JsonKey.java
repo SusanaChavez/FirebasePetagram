@@ -15,6 +15,7 @@ public final class JsonKey {
     public static final String MEDIA_URL            = "url";
     public static final String MEDIA_LIKES          = "likes";
     public static final String MEDIA_LIKES_COUNT    = "count";
+    public static final String FOTO_ID              = "id";
 
     public static final String USER_NAME            = "username";
     public static final String USER_FOTO_PERFIL     = "profile_picture";

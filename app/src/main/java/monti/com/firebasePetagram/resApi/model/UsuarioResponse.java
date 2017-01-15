@@ -8,6 +8,7 @@ public class UsuarioResponse {
     private String id_usuario_instagram;
     private String id_dispositivo;
 
+
     public UsuarioResponse() {
     }
 
@@ -37,7 +38,4 @@ public class UsuarioResponse {
         return id_usuario_instagram;
     }
 
-    public void setId_usuario_instagram(String id_usuario_instagram) {
-        this.id_usuario_instagram = id_usuario_instagram;
-    }
 }

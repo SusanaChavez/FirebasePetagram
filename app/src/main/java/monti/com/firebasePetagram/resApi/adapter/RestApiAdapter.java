@@ -18,12 +18,22 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RestApiAdapter {
+
+
     public EndpointApi establecerConexionRestApiInstagram(Gson gson){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ConstantesResApi.ROOT_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         return retrofit.create(EndpointApi.class);
+    }
+
+    public Endpoint establecerConexionRestApiInstagram(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstantesResApi.ROOT_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        return retrofit.create(Endpoint.class);
     }
 
     public Gson construyeGsonDeserializadorMediaRecent(){

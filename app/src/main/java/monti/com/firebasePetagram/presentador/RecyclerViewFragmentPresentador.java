@@ -43,11 +43,11 @@ public class RecyclerViewFragmentPresentador implements IRecyclerViewFragmentPre
         this.iRecyclerViewFragmentView = view;
         this.context = context;
 
-        if (cargarUsuario() != "")
+        cuenta = cargarUsuario();
+        if (cuenta.compareTo("") == 0)
         {
-            cuenta = cargarUsuario();
+            cuenta = "susana.chvz";
         }
-
       //  obtenerMascotasBD();
         obtenerMedioRecientes();
     }

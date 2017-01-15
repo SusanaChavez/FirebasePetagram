@@ -4,11 +4,13 @@ public class Mascota {
     private String id;  //Porque tomo el ID que obtengo de hacer GET
     private String nombreCompleto;
     private String urlFoto;
+    private String idFoto;
     private int likes = 0;
 
-    public Mascota(String nombreCompleto, String urlFoto, int likes) {
+    public Mascota(String nombreCompleto, String urlFoto, String idFoto, int likes) {
         this.nombreCompleto = nombreCompleto;
         this.urlFoto = urlFoto;
+        this.idFoto = idFoto;
         this.likes = likes;
     }
 
@@ -39,6 +41,10 @@ public class Mascota {
     public void setUrlFoto(String urlFoto) {
         this.urlFoto = urlFoto;
     }
+
+    public String getIdFoto() { return idFoto;}
+
+    public void setIdFoto(String idFoto) { this.idFoto = idFoto;}
 
     public int getLikes() {
         return likes;

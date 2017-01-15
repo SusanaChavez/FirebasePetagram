@@ -48,24 +48,27 @@ public class ConfigurarCuenta extends AppCompatActivity {
     public void guardar(){
         String usuario = tvCuenta.getText().toString();
 
-        try{
+        if ((usuario.compareTo("susana.chvz") == 0) || (usuario.compareTo("miaucat123") == 0)) {
 
-            FileOutputStream fos = openFileOutput("usuario.txt", MODE_PRIVATE);
-            OutputStreamWriter osw = new OutputStreamWriter(fos);
+            try {
 
-            // Escribimos el String en el archivo
-            osw.write(usuario);
-            osw.flush();
-            osw.close();
+                FileOutputStream fos = openFileOutput("usuario.txt", MODE_PRIVATE);
+                OutputStreamWriter osw = new OutputStreamWriter(fos);
 
-            // Mostramos que se ha guardado
-            Toast.makeText(getBaseContext(), "Guardado", Toast.LENGTH_SHORT).show();
+                // Escribimos el String en el archivo
+                osw.write(usuario);
+                osw.flush();
+                osw.close();
 
-            tvCuenta.setText("");
-        }
-        catch (IOException ex)
-        {
-            ex.printStackTrace();
+                // Mostramos que se ha guardado
+                Toast.makeText(getBaseContext(), "Guardado", Toast.LENGTH_SHORT).show();
+
+                tvCuenta.setText("");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }else{
+            Toast.makeText(getBaseContext(), usuario + " Incorrecto :(", Toast.LENGTH_SHORT).show();
         }
 
     }

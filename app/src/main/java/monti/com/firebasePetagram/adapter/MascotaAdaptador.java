@@ -1,18 +1,28 @@
 package monti.com.firebasePetagram.adapter;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import monti.com.firebasePetagram.DetalleFoto;
 import monti.com.firebasePetagram.R;
 import monti.com.firebasePetagram.pojo.Mascota;
+import monti.com.firebasePetagram.resApi.Endpoint;
+import monti.com.firebasePetagram.resApi.EndpointApi;
+import monti.com.firebasePetagram.resApi.adapter.RestApiAdapter;
+import monti.com.firebasePetagram.resApi.model.LikeMedia;
+import monti.com.firebasePetagram.resApi.model.UsuarioResponse;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import com.squareup.picasso.Picasso;
 
@@ -35,7 +45,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     @Override
     public void onBindViewHolder(final MascotaAdaptador.MascotaViewHolder holder, int position) {
         final Mascota mascota = mascotas.get(position);
-       // holder.imgFoto.setImageResource(mascota.getUrlFoto());
+        // holder.imgFoto.setImageResource(mascota.getUrlFoto());
         Picasso.with(activity)
                 .load(mascota.getUrlFoto())
                 .placeholder(R.drawable.pata)
@@ -48,10 +58,11 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
                 intent.putExtra("url", mascota.getUrlFoto());
                 intent.putExtra("like", mascota.getLikes());
                 v.getContext().startActivity(intent);
-
             }
         });
-    /*    holder.btnLike.setOnClickListener(new View.OnClickListener() {
+
+        /* PARA BASE DE DATOS
+        holder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               //  Toast.makeText(v.getContext(), "Te gustaaaa  "+mascota.getNombre(), Toast.LENGTH_SHORT).show();
@@ -63,8 +74,11 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
                holder.tvLikesCV.invalidate();
             }
         });
+
         */
+
     }
+
 
     @Override
     public int getItemCount() {
@@ -74,11 +88,13 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     public static class MascotaViewHolder extends RecyclerView.ViewHolder{
         private ImageView imgFoto;
         private TextView tvLikesCV;
+        private ImageButton btnLike;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
             imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
             tvLikesCV = (TextView) itemView.findViewById(R.id.tvTantoCV);
+            btnLike = (ImageButton) itemView.findViewById(R.id.btnLike);
         }
     }
 }

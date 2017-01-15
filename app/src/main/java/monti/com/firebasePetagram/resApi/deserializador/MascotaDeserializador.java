@@ -46,10 +46,14 @@ public class MascotaDeserializador implements JsonDeserializer<MascotaResponse> 
             JsonObject likesJson = mascotaResponseDataObject.getAsJsonObject(JsonKey.MEDIA_LIKES);
             int likes = likesJson.get(JsonKey.MEDIA_LIKES_COUNT).getAsInt();
 
+            String idFoto = mascotaResponseDataObject.get(JsonKey.FOTO_ID).getAsString();
+
+
             Mascota mascotaActual = new Mascota();
             mascotaActual.setId(id);
             mascotaActual.setNombreCompleto(nombreCompleto);
             mascotaActual.setUrlFoto(urlFoto);
+            mascotaActual.setIdFoto(idFoto);
             mascotaActual.setLikes(likes);
 
             mascotas.add(mascotaActual);
