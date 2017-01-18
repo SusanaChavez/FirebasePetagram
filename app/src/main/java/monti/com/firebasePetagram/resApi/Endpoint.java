@@ -25,6 +25,12 @@ public interface Endpoint {
 
     @POST(ConstantesResApi.KEY_LIKE_FOTO)
     Call<LikeMedia> likeFoto(@Path("idFoto") String idFoto, @Query("access_token") String access_token);
+
+    @GET(ConstantesResApi.KEY_DI_LIKE)
+    Call<UsuarioResponse> notificar(@Path("id") String id);
+
+
+
 /*
     @FormUrlEncoded
     @POST(ConstantesResApi.KEY_POST_HEROKU_MEDIA_LIKE)

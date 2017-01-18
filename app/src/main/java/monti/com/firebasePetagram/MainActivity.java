@@ -30,6 +30,7 @@ import monti.com.firebasePetagram.resApi.Endpoint;
 import monti.com.firebasePetagram.resApi.EndpointApi;
 import monti.com.firebasePetagram.resApi.adapter.RestApiAdapter;
 import monti.com.firebasePetagram.resApi.model.FotoResponse;
+import monti.com.firebasePetagram.resApi.model.LikeMedia;
 import monti.com.firebasePetagram.resApi.model.UsuarioResponse;
 import monti.com.firebasePetagram.vistas.PerfilFragment;
 import monti.com.firebasePetagram.vistas.RecyclerViewFragment;
@@ -234,6 +235,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void toqueAnimal (View v){
+
+    }
+
+
+
+
+
+
+
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {

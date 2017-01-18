@@ -35,8 +35,9 @@ public final class ConstantesResApi {
     // https://api.instagram.com/v1/media/{media-id}/likes
     //https://api.instagram.com/v1/media/1384311435290763846_4140112305/likes?access_token=3221225214.419fad8.dd48302ce4ef4756aec2943a9162562e
     public static final String KEY_LIKE_FOTO = "https://api.instagram.com/v1/media/{idFoto}/likes";
-//    public static final String URL_LIKE_FOTO = KEY_LIKE_FOTO + TAG_ACCESS_TOKEN;
 
 //    public static final String KEY_POST_HEROKU_MEDIA_LIKE = "like-media/";
+
+    public static final String KEY_DI_LIKE = "di-like/{id}/";
 
 }
