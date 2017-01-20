@@ -18,4 +18,6 @@
     <string name="mp_Configurar">Configurar Cuenta</string>
     <string name="mp_Notificacion">Recibir Notificaiones</string>
     <string name="texto_accion_perfil">Ver perfil</string>
+    <string name="texto_seguir">Seguir</string>
+    <string name="texto_ver_usuario">Ver usuario</string>
 </resources>
