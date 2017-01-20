@@ -2,7 +2,10 @@ package monti.com.firebasePetagram.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Explode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,10 +57,21 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         holder.imgFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), DetalleFoto.class);
+                Intent intent = new Intent(activity, DetalleFoto.class);
                 intent.putExtra("url", mascota.getUrlFoto());
                 intent.putExtra("like", mascota.getLikes());
-                v.getContext().startActivity(intent);
+
+                // Esto es porque las transiociones existen desde la version LOLLIPOP
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Explode explode = new Explode();
+                    explode.setDuration(1000);
+                    activity.getWindow().setExitTransition(explode);
+                    activity.startActivity(intent,
+                            ActivityOptionsCompat.makeSceneTransitionAnimation(activity, v, activity.getString(R.string.transicion_foto)).toBundle());
+
+                }else {
+                    activity.startActivity(intent);
+                }
             }
         });
 

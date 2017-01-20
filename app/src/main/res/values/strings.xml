@@ -20,4 +20,5 @@
     <string name="texto_accion_perfil">Ver perfil</string>
     <string name="texto_seguir">Seguir</string>
     <string name="texto_ver_usuario">Ver usuario</string>
+    <string name="transicion_foto">animacion_foto</string>
 </resources>
