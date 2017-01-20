@@ -40,4 +40,5 @@ public final class ConstantesResApi {
 
     public static final String KEY_DI_LIKE = "di-like/{id}/";
 
+    public static final String KEY_SEGUIR = "seguir/{id}/";
 }

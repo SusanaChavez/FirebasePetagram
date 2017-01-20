@@ -74,6 +74,16 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         setUpViewpager();
+
+        //Lo siguiente intenta abrir MainActivity e inflar el fragment del Perfil
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            if (bundle.getString("fragment") != null) {
+        /*Log.w(getClass().toString(), bundle.getString("fragment"));*/
+                viewPager.setCurrentItem(2);
+            }
+        }
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -236,18 +246,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void toqueAnimal (View v){
-
-    }
-
-
-
-
-
-
-
-
-    @Override
+     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
 

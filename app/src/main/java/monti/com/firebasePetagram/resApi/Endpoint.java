@@ -29,7 +29,8 @@ public interface Endpoint {
     @GET(ConstantesResApi.KEY_DI_LIKE)
     Call<UsuarioResponse> notificar(@Path("id") String id);
 
-
+    @GET(ConstantesResApi.KEY_SEGUIR)
+    Call<UsuarioResponse> seguir(@Path("id") String id);
 
 /*
     @FormUrlEncoded

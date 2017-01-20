@@ -17,4 +17,5 @@
     <string name="btnGuardar">Guardar Cuenta</string>
     <string name="mp_Configurar">Configurar Cuenta</string>
     <string name="mp_Notificacion">Recibir Notificaiones</string>
+    <string name="texto_accion_perfil">Ver perfil</string>
 </resources>
